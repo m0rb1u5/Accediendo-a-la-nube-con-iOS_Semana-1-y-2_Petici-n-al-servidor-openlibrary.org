@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		94B0F9061DA4F967007C1E03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B0F9051DA4F967007C1E03 /* AppDelegate.swift */; };
+		94B0F9081DA4F967007C1E03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B0F9071DA4F967007C1E03 /* ViewController.swift */; };
+		94B0F90B1DA4F967007C1E03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B0F9091DA4F967007C1E03 /* Main.storyboard */; };
+		94B0F90E1DA4F967007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_org.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94B0F90C1DA4F967007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_org.xcdatamodeld */; };
+		94B0F9101DA4F967007C1E03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B0F90F1DA4F967007C1E03 /* Assets.xcassets */; };
+		94B0F9131DA4F967007C1E03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B0F9111DA4F967007C1E03 /* LaunchScreen.storyboard */; };
+		94B0F91E1DA4F968007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_orgTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B0F91D1DA4F968007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_orgTests.swift */; };
+		94B0F9291DA4F968007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_orgUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B0F9281DA4F968007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_orgUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		94B0F91A1DA4F968007C1E03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94B0F8FA1DA4F966007C1E03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94B0F9011DA4F967007C1E03;
+			remoteInfo = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org";
+		};
+		94B0F9251DA4F968007C1E03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94B0F8FA1DA4F966007C1E03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94B0F9011DA4F967007C1E03;
+			remoteInfo = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		94B0F9021DA4F967007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94B0F9051DA4F967007C1E03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		94B0F9071DA4F967007C1E03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		94B0F90A1DA4F967007C1E03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		94B0F90D1DA4F967007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_org.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_org.xcdatamodel; sourceTree = "<group>"; };
+		94B0F90F1DA4F967007C1E03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94B0F9121DA4F967007C1E03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		94B0F9141DA4F967007C1E03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94B0F9191DA4F968007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94B0F91D1DA4F968007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_orgTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_orgTests.swift; sourceTree = "<group>"; };
+		94B0F91F1DA4F968007C1E03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94B0F9241DA4F968007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94B0F9281DA4F968007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_orgUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_orgUITests.swift; sourceTree = "<group>"; };
+		94B0F92A1DA4F968007C1E03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94B0F8FF1DA4F967007C1E03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94B0F9161DA4F967007C1E03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94B0F9211DA4F968007C1E03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		94B0F8F91DA4F966007C1E03 = {
+			isa = PBXGroup;
+			children = (
+				94B0F9041DA4F967007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org */,
+				94B0F91C1DA4F968007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgTests */,
+				94B0F9271DA4F968007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgUITests */,
+				94B0F9031DA4F967007C1E03 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		94B0F9031DA4F967007C1E03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94B0F9021DA4F967007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org.app */,
+				94B0F9191DA4F968007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgTests.xctest */,
+				94B0F9241DA4F968007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94B0F9041DA4F967007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org */ = {
+			isa = PBXGroup;
+			children = (
+				94B0F9051DA4F967007C1E03 /* AppDelegate.swift */,
+				94B0F9071DA4F967007C1E03 /* ViewController.swift */,
+				94B0F9091DA4F967007C1E03 /* Main.storyboard */,
+				94B0F90F1DA4F967007C1E03 /* Assets.xcassets */,
+				94B0F9111DA4F967007C1E03 /* LaunchScreen.storyboard */,
+				94B0F9141DA4F967007C1E03 /* Info.plist */,
+				94B0F90C1DA4F967007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_org.xcdatamodeld */,
+			);
+			path = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org";
+			sourceTree = "<group>";
+		};
+		94B0F91C1DA4F968007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgTests */ = {
+			isa = PBXGroup;
+			children = (
+				94B0F91D1DA4F968007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_orgTests.swift */,
+				94B0F91F1DA4F968007C1E03 /* Info.plist */,
+			);
+			path = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgTests";
+			sourceTree = "<group>";
+		};
+		94B0F9271DA4F968007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgUITests */ = {
+			isa = PBXGroup;
+			children = (
+				94B0F9281DA4F968007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_orgUITests.swift */,
+				94B0F92A1DA4F968007C1E03 /* Info.plist */,
+			);
+			path = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94B0F9011DA4F967007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94B0F92D1DA4F968007C1E03 /* Build configuration list for PBXNativeTarget "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org" */;
+			buildPhases = (
+				94B0F8FE1DA4F967007C1E03 /* Sources */,
+				94B0F8FF1DA4F967007C1E03 /* Frameworks */,
+				94B0F9001DA4F967007C1E03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org";
+			productName = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org";
+			productReference = 94B0F9021DA4F967007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org.app */;
+			productType = "com.apple.product-type.application";
+		};
+		94B0F9181DA4F967007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94B0F9301DA4F968007C1E03 /* Build configuration list for PBXNativeTarget "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgTests" */;
+			buildPhases = (
+				94B0F9151DA4F967007C1E03 /* Sources */,
+				94B0F9161DA4F967007C1E03 /* Frameworks */,
+				94B0F9171DA4F967007C1E03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94B0F91B1DA4F968007C1E03 /* PBXTargetDependency */,
+			);
+			name = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgTests";
+			productName = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgTests";
+			productReference = 94B0F9191DA4F968007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		94B0F9231DA4F968007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94B0F9331DA4F968007C1E03 /* Build configuration list for PBXNativeTarget "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgUITests" */;
+			buildPhases = (
+				94B0F9201DA4F968007C1E03 /* Sources */,
+				94B0F9211DA4F968007C1E03 /* Frameworks */,
+				94B0F9221DA4F968007C1E03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94B0F9261DA4F968007C1E03 /* PBXTargetDependency */,
+			);
+			name = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgUITests";
+			productName = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgUITests";
+			productReference = 94B0F9241DA4F968007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94B0F8FA1DA4F966007C1E03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Juan Carlos Carbajal Ipenza";
+				TargetAttributes = {
+					94B0F9011DA4F967007C1E03 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 85667CV2UC;
+						ProvisioningStyle = Automatic;
+					};
+					94B0F9181DA4F967007C1E03 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 85667CV2UC;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 94B0F9011DA4F967007C1E03;
+					};
+					94B0F9231DA4F968007C1E03 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 85667CV2UC;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 94B0F9011DA4F967007C1E03;
+					};
+				};
+			};
+			buildConfigurationList = 94B0F8FD1DA4F966007C1E03 /* Build configuration list for PBXProject "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 94B0F8F91DA4F966007C1E03;
+			productRefGroup = 94B0F9031DA4F967007C1E03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94B0F9011DA4F967007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org */,
+				94B0F9181DA4F967007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgTests */,
+				94B0F9231DA4F968007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94B0F9001DA4F967007C1E03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94B0F9131DA4F967007C1E03 /* LaunchScreen.storyboard in Resources */,
+				94B0F9101DA4F967007C1E03 /* Assets.xcassets in Resources */,
+				94B0F90B1DA4F967007C1E03 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94B0F9171DA4F967007C1E03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94B0F9221DA4F968007C1E03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94B0F8FE1DA4F967007C1E03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94B0F9081DA4F967007C1E03 /* ViewController.swift in Sources */,
+				94B0F90E1DA4F967007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_org.xcdatamodeld in Sources */,
+				94B0F9061DA4F967007C1E03 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94B0F9151DA4F967007C1E03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94B0F91E1DA4F968007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_orgTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94B0F9201DA4F968007C1E03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94B0F9291DA4F968007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_orgUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		94B0F91B1DA4F968007C1E03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94B0F9011DA4F967007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org */;
+			targetProxy = 94B0F91A1DA4F968007C1E03 /* PBXContainerItemProxy */;
+		};
+		94B0F9261DA4F968007C1E03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94B0F9011DA4F967007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org */;
+			targetProxy = 94B0F9251DA4F968007C1E03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		94B0F9091DA4F967007C1E03 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94B0F90A1DA4F967007C1E03 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		94B0F9111DA4F967007C1E03 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94B0F9121DA4F967007C1E03 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		94B0F92B1DA4F968007C1E03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		94B0F92C1DA4F968007C1E03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		94B0F92E1DA4F968007C1E03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 85667CV2UC;
+				INFOPLIST_FILE = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.m0rb1u5.Accediendo-a-la-nube-con-iOS-Semana-1-Petici-n-al-servidor-openlibrary-org";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		94B0F92F1DA4F968007C1E03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 85667CV2UC;
+				INFOPLIST_FILE = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.m0rb1u5.Accediendo-a-la-nube-con-iOS-Semana-1-Petici-n-al-servidor-openlibrary-org";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		94B0F9311DA4F968007C1E03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 85667CV2UC;
+				INFOPLIST_FILE = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.m0rb1u5.Accediendo-a-la-nube-con-iOS-Semana-1-Petici-n-al-servidor-openlibrary-orgTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org.app/Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org";
+			};
+			name = Debug;
+		};
+		94B0F9321DA4F968007C1E03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 85667CV2UC;
+				INFOPLIST_FILE = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.m0rb1u5.Accediendo-a-la-nube-con-iOS-Semana-1-Petici-n-al-servidor-openlibrary-orgTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org.app/Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org";
+			};
+			name = Release;
+		};
+		94B0F9341DA4F968007C1E03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 85667CV2UC;
+				INFOPLIST_FILE = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.m0rb1u5.Accediendo-a-la-nube-con-iOS-Semana-1-Petici-n-al-servidor-openlibrary-orgUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org";
+			};
+			name = Debug;
+		};
+		94B0F9351DA4F968007C1E03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 85667CV2UC;
+				INFOPLIST_FILE = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.m0rb1u5.Accediendo-a-la-nube-con-iOS-Semana-1-Petici-n-al-servidor-openlibrary-orgUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94B0F8FD1DA4F966007C1E03 /* Build configuration list for PBXProject "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94B0F92B1DA4F968007C1E03 /* Debug */,
+				94B0F92C1DA4F968007C1E03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94B0F92D1DA4F968007C1E03 /* Build configuration list for PBXNativeTarget "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94B0F92E1DA4F968007C1E03 /* Debug */,
+				94B0F92F1DA4F968007C1E03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		94B0F9301DA4F968007C1E03 /* Build configuration list for PBXNativeTarget "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94B0F9311DA4F968007C1E03 /* Debug */,
+				94B0F9321DA4F968007C1E03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		94B0F9331DA4F968007C1E03 /* Build configuration list for PBXNativeTarget "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94B0F9341DA4F968007C1E03 /* Debug */,
+				94B0F9351DA4F968007C1E03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		94B0F90C1DA4F967007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_org.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				94B0F90D1DA4F967007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_org.xcdatamodel */,
+			);
+			currentVersion = 94B0F90D1DA4F967007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_org.xcdatamodel */;
+			path = Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_org.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 94B0F8FA1DA4F966007C1E03 /* Project object */;
+}

@@ -81,6 +81,13 @@
             ReferencedContainer = "container:Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "OS_ACTIVITY_MODE"
+            value = "disable"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

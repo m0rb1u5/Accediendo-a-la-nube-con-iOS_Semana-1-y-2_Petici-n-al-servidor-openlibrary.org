@@ -518,6 +518,7 @@
 				94B0F92F1DA4F968007C1E03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94B0F9301DA4F968007C1E03 /* Build configuration list for PBXNativeTarget "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +527,7 @@
 				94B0F9321DA4F968007C1E03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94B0F9331DA4F968007C1E03 /* Build configuration list for PBXNativeTarget "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.orgUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +536,7 @@
 				94B0F9351DA4F968007C1E03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

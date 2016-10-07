@@ -26,25 +26,37 @@ class ViewController: UIViewController, UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let urls = "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:"+searchBar.text!
         let url: NSURL? = NSURL(string: urls)
-        let datos: NSData? = NSData(contentsOf: url! as URL)
-        if (datos != nil) {
-            let texto: NSString? = NSString(data: datos! as Data, encoding: String.Encoding.utf8.rawValue)
-            self.textView.text = texto! as String
-            searchBar.resignFirstResponder()
-        }
-        else {
-            let title = NSLocalizedString("Alerta", comment: "")
-            let message = NSLocalizedString("No se puede conectar al servidor.", comment: "")
-            let cancelButtonTitle = NSLocalizedString("OK", comment: "")
-            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .cancel) { action in
-                NSLog("La alerta acaba de ocurrir.")
+        
+        let sesion: URLSession = URLSession.shared
+        let bloque = { (datos: Data?, resp: URLResponse?, error: Error?) -> Void in
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
             }
-            alertController.addAction(cancelAction)
-            
-            searchBar.resignFirstResponder()
-            present(alertController, animated: true, completion: nil)
+            if (error == nil) {
+                let texto: NSString? = NSString(data: datos! as Data, encoding: String.Encoding.utf8.rawValue)
+                DispatchQueue.main.async {
+                    self.textView.text = texto! as String
+                }
+            }
+            else {
+                let e = error as! NSError
+                print(e)
+                DispatchQueue.main.async {
+                    let title = NSLocalizedString("Error \(e.code)", comment: "")
+                    let message = NSLocalizedString(e.localizedDescription, comment: "")
+                    let cancelButtonTitle = NSLocalizedString("OK", comment: "")
+                    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                    let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .cancel) { action in
+                        NSLog("La alerta acaba de ocurrir.")
+                    }
+                    alertController.addAction(cancelAction)
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
         }
+        
+        let dt: URLSessionDataTask = sesion.dataTask(with: url! as URL, completionHandler: bloque)
+        dt.resume()
     }
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         textView.text = ""

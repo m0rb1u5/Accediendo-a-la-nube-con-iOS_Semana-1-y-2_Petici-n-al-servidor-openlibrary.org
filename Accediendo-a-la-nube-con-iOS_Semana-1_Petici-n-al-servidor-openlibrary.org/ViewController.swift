@@ -58,15 +58,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
                             self.textView.isScrollEnabled = true
                             self.textView.text = ""
                             
-                            //self.indicator.translatesAutoresizingMaskIntoConstraints = false
                             self.indicator.autoresizingMask = [.flexibleRightMargin, .flexibleHeight]
                             self.pending.view.addSubview(self.indicator)
-                            
-                            /*let views = ["pending" : pending.view, "indicator" : self.indicator]
-                            var constraints = NSLayoutConstraint.constraints(withVisualFormat: "V:[indicator]-(-50)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
-                            constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|[indicator]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
-                            pending.view.addConstraints(constraints)*/
-                            
                             self.indicator.startAnimating()
                             self.present(self.pending, animated: true, completion: nil)
                         }

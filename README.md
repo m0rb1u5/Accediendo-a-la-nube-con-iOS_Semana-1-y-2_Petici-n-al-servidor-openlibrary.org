@@ -51,7 +51,7 @@ Se muestra la pantalla del iPhone 7 al ejecutar el programa:
 
 ![Alt Text](https://github.com/m0rb1u5/Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org/raw/master/out4_1.gif)
 
-* En caso de falla o de producirse algún error se muestra una alerta con el código y descripción del error:
+* <a name="resultado_error"></a> En caso de falla o de producirse algún error se muestra una alerta con el código y descripción del error:
 
 ![Alt Text](https://github.com/m0rb1u5/Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org/raw/master/out4_2.gif)
 
@@ -102,9 +102,7 @@ Se muestra la pantalla del iPhone 7 al ejecutar el programa:
 
 ![Alt Text](https://github.com/m0rb1u5/Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org/raw/master/out5.gif)
 
-* En caso de falla o de producirse algún error se muestra una alerta con el código y descripción del error:
-
-![Alt Text](https://github.com/m0rb1u5/Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org/raw/master/out4_2.gif)
+* En caso de falla o de producirse algún error se muestra una alerta con el código y descripción del error como se muestra en el resultado de [Petición al servidor openlibrary.org](#resultado_error)
 
 ***
 Juan Carlos Carbajal Ipenza

@@ -117,6 +117,8 @@ Puedes seleccionar, al momento de crear tu proyecto la plantilla Maestro-Detalle
 
 **IMPORTANTE**. Al momento de crear tu proyecto, no olvides seleccionar el uso de Core Data ya que se usará en ese módulo y así se facilitan las cosas
 
+<img src="./core_data.png" width="500">
+
 ## Criterios de revisión
 1. Al iniciar la aplicación, una vista tabla deberá ser mostrada
 2. Deberá contener un **UIBarButtonItem**, en específico el Add (signo +) en la barra de navegación que permita hacer una búsqueda y añadir el libro a la tabla

@@ -47,13 +47,13 @@ Sube tu solución a GitHub e ingresa la URL en el campo correspondiente
 
 ## Resultado
 Se muestra la pantalla del iPhone 7 al ejecutar el programa:
-* Se muestran los datos crudos (sin procesar) producto de la consulta en la vista texto en concordancia con el ISBN que se ingreso en la caja de texto:
+* Se muestran los datos crudos (sin procesar) producto de la consulta en la vista texto en concordancia con el ISBN que se ingreso en la caja de texto (hacer click en la imagen para ver la ejecución):
 
-![Alt Text](https://github.com/m0rb1u5/Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org/raw/master/out4_1.gif)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/UdrlkI1vGWY/0.jpg)](https://www.youtube.com/watch?v=UdrlkI1vGWY "Petición al servidor openlibrary.org: resultados (1 de 2)")
 
-* <a name="resultado_error"></a> En caso de falla o de producirse algún error se muestra una alerta con el código y descripción del error:
+* <a name="resultado_error"></a> En caso de falla o de producirse algún error se muestra una alerta con el código y descripción del error (hacer click en la imagen para ver la ejecución):
 
-![Alt Text](https://github.com/m0rb1u5/Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org/raw/master/out4_2.gif)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ub2PnS8yTXQ/0.jpg)](https://www.youtube.com/watch?v=ub2PnS8yTXQ "Petición al servidor openlibrary.org: errores (2 de 2)")
 
 ***
 
@@ -98,9 +98,9 @@ La aplicación deberá tener la funcionalidad especificada y en la vista se debe
 
 ## Resultado
 Se muestra la pantalla del iPhone 7 al ejecutar el programa:
-* A partir del ISBN tipeado se muestran los datos procesados que son la información del libro buscado. Estos son mostrados de manera adecuada y con atributos:
+* A partir del ISBN tipeado se muestran los datos procesados que son la información del libro buscado. Estos son mostrados de manera adecuada y con atributos (hacer click en la imagen para ver la ejecución):
 
-![Alt Text](https://github.com/m0rb1u5/Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org/raw/master/out5.gif)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/_iUln0nhRGo/0.jpg)](https://www.youtube.com/watch?v=_iUln0nhRGo "Procesando el resultado de la petición al servidor openlibrary.org")
 
 * En caso de falla o de producirse algún error se muestra una alerta con el código y descripción del error como se muestra en el resultado correspondiente a errores de [Petición al servidor openlibrary.org](#resultado_error).
 

@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol MyDelegado {
+    func agregarLibro(libro: Libro)
+}
+
 class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var textView: UITextView!
     var pending: UIAlertController!
     var indicator: UIActivityIndicatorView!
+    var libro: Libro = Libro()
+    var delegado: MyDelegado?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,13 +51,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
                     let json = try JSONSerialization.jsonObject(with: datos! as Data, options: JSONSerialization.ReadingOptions.mutableLeaves)
                     let dico1 = json as! NSDictionary
                     if (dico1["ISBN:"+searchBar.text!] != nil) {
-                        let bodyFontDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: UIFontTextStyle.body)
-                        let bodyFont = UIFont(descriptor: bodyFontDescriptor, size: 0)
-                        let paragraphStyle = NSMutableParagraphStyle()
-                        paragraphStyle.alignment = .center
-                        let attributedText = NSMutableAttributedString.init(string: "")
-                        
+                        self.libro = Libro()
                         DispatchQueue.main.async {
+                            let bodyFontDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: UIFontTextStyle.body)
+                            let bodyFont = UIFont(descriptor: bodyFontDescriptor, size: 0)
                             self.textView.font = bodyFont
                             self.textView.textColor = UIColor.black
                             self.textView.backgroundColor = UIColor.white
@@ -67,35 +70,23 @@ class ViewController: UIViewController, UISearchBarDelegate {
                         let dico2 = dico1["ISBN:"+searchBar.text!] as! NSDictionary
                     
                         if (dico2["title"] != nil) {
-                            let titulo = dico2["title"] as! NSString as String + "\n"
-                            let boldFontDescriptor = self.textView.font!.fontDescriptor.withSymbolicTraits(.traitBold)
-                            let boldFont = UIFont(descriptor: boldFontDescriptor!, size: 24.0)
-                            let agregarTitulo = NSMutableAttributedString.init(string: titulo)
-                            agregarTitulo.addAttribute(NSFontAttributeName, value: boldFont, range: NSMakeRange(0, agregarTitulo.length))
-                            agregarTitulo.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, agregarTitulo.length))
-                            agregarTitulo.addAttribute(NSForegroundColorAttributeName, value: UIColor(red: 80/255, green: 165/255, blue: 247/255, alpha: 1.0), range: NSMakeRange(0, agregarTitulo.length))
-                            attributedText.append(agregarTitulo)
+                            let titulo = dico2["title"] as! NSString as String
+                            self.libro.titulo = titulo
                         }
                     
                         if (dico2["authors"] != nil) {
                             let autores = dico2["authors"] as! NSArray as Array
                             let autor0 = autores[0] as! NSDictionary
                             if (autor0["name"] != nil) {
-                                var texto_autores = "escrito por "
-                                texto_autores += autor0["name"] as! NSString as String
+                                let textAutor0 = autor0["name"] as! NSString as String
+                                self.libro.autores.append(textAutor0)
                                 for index in 1..<autores.count {
                                     let autor = autores[index] as! NSDictionary
                                     if (autor["name"] != nil) {
-                                        texto_autores += ", "
-                                        texto_autores += autor["name"] as! NSString as String
+                                        let textAutor = autor["name"] as! NSString as String
+                                        self.libro.autores.append(textAutor)
                                     }
                                 }
-                                texto_autores += "\n\n"
-                                let agregarNombre = NSMutableAttributedString.init(string: texto_autores)
-                                agregarNombre.addAttribute(NSFontAttributeName, value: bodyFont, range: NSMakeRange(0, agregarNombre.length))
-                                agregarNombre.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, agregarNombre.length))
-                                agregarNombre.addAttribute(NSForegroundColorAttributeName, value: UIColor(red: 170/255, green: 170/255, blue: 170/255, alpha: 1.0), range: NSMakeRange(0, agregarNombre.length))
-                                attributedText.append(agregarNombre)
                             }
                         }
                     
@@ -104,40 +95,25 @@ class ViewController: UIViewController, UISearchBarDelegate {
                             if (portada["medium"] != nil) {
                                 let medium = portada["medium"] as! NSString as String
                                 if let checkedUrl = URL(string: medium) {
-                                    let textAttachment = NSTextAttachment()
                                     let data = try? Data(contentsOf: checkedUrl)
                                     let image = UIImage(data: data!)
-                                    textAttachment.image = image
-                                    textAttachment.bounds = CGRect(origin: CGPoint.zero, size: (image?.size)!)
-                                    let textAttachmentString = NSMutableAttributedString(attributedString: NSAttributedString(attachment: textAttachment))
-                                    textAttachmentString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, textAttachmentString.length))
-                                    attributedText.append(textAttachmentString)
+                                    self.libro.cover = image
                                 }
                             }
                             else if (portada["small"] != nil) {
                                 let small = portada["small"] as! NSString as String
                                 if let checkedUrl = URL(string: small) {
-                                    let textAttachment = NSTextAttachment()
                                     let data = try? Data(contentsOf: checkedUrl)
                                     let image = UIImage(data: data!)
-                                    textAttachment.image = image
-                                    textAttachment.bounds = CGRect(origin: CGPoint.zero, size: (image?.size)!)
-                                    let textAttachmentString = NSMutableAttributedString(attributedString: NSAttributedString(attachment: textAttachment))
-                                    textAttachmentString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, textAttachmentString.length))
-                                    attributedText.append(textAttachmentString)
+                                    self.libro.cover = image
                                 }
                             }
                             else if (portada["large"] != nil) {
                                 let large = portada["large"] as! NSString as String
                                 if let checkedUrl = URL(string: large) {
-                                    let textAttachment = NSTextAttachment()
                                     let data = try? Data(contentsOf: checkedUrl)
                                     let image = UIImage(data: data!)
-                                    textAttachment.image = image
-                                    textAttachment.bounds = CGRect(origin: CGPoint.zero, size: (image?.size)!)
-                                    let textAttachmentString = NSMutableAttributedString(attributedString: NSAttributedString(attachment: textAttachment))
-                                    textAttachmentString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, textAttachmentString.length))
-                                    attributedText.append(textAttachmentString)
+                                    self.libro.cover = image
                                 }
                             }
                         }
@@ -145,7 +121,20 @@ class ViewController: UIViewController, UISearchBarDelegate {
                         DispatchQueue.main.async {
                             self.indicator.stopAnimating()
                             self.dismiss(animated: true, completion: nil)
-                            self.textView.attributedText = attributedText
+                            self.textView.attributedText = self.libro.getAttributedText()
+                        }
+                    }
+                    else {
+                        DispatchQueue.main.async {
+                            let title = NSLocalizedString("Advertencia", comment: "")
+                            let message = NSLocalizedString("EL ISBN no existe, intente con otro.", comment: "")
+                            let cancelButtonTitle = NSLocalizedString("OK", comment: "")
+                            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                            let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .cancel) { action in
+                                NSLog("La alerta acaba de ocurrir.")
+                            }
+                            alertController.addAction(cancelAction)
+                            self.present(alertController, animated: true, completion: nil)
                         }
                     }
                 }
@@ -184,7 +173,31 @@ class ViewController: UIViewController, UISearchBarDelegate {
         dt.resume()
     }
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.libro = Libro()
         textView.text = ""
         searchBar.text = nil
         searchBar.resignFirstResponder()
-    }}
+    }
+    @IBAction func cancelar(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func agregar(_ sender: UIBarButtonItem) {
+        if let delegado = self.delegado {
+            if !self.libro.isEmpty() {
+                delegado.agregarLibro(libro: self.libro)
+                self.dismiss(animated: true, completion: nil)
+            }
+            else {
+                let title = NSLocalizedString("Advertencia", comment: "")
+                let message = NSLocalizedString("No se buscó algún libro, por lo tanto no se pudo agregar alguno.", comment: "")
+                let cancelButtonTitle = NSLocalizedString("OK", comment: "")
+                let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .cancel) { action in
+                    NSLog("La alerta acaba de ocurrir.")
+                }
+                alertController.addAction(cancelAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
+}

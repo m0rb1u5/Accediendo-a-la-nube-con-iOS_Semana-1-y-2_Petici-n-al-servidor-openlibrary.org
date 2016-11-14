@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94616F201DD5C8E600A5DB9E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94616F1F1DD5C8E600A5DB9E /* TableViewController.swift */; };
+		94616F221DD5E06100A5DB9E /* Libro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94616F211DD5E06100A5DB9E /* Libro.swift */; };
+		94616F241DD5F2BB00A5DB9E /* DetalleLibroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94616F231DD5F2BB00A5DB9E /* DetalleLibroController.swift */; };
 		94B0F9061DA4F967007C1E03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B0F9051DA4F967007C1E03 /* AppDelegate.swift */; };
 		94B0F9081DA4F967007C1E03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B0F9071DA4F967007C1E03 /* ViewController.swift */; };
 		94B0F90B1DA4F967007C1E03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B0F9091DA4F967007C1E03 /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		94616F1F1DD5C8E600A5DB9E /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		94616F211DD5E06100A5DB9E /* Libro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libro.swift; sourceTree = "<group>"; };
+		94616F231DD5F2BB00A5DB9E /* DetalleLibroController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleLibroController.swift; sourceTree = "<group>"; };
 		94B0F9021DA4F967007C1E03 /* Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Accediendo-a-la-nube-con-iOS_Semana-1_Petici-n-al-servidor-openlibrary.org.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B0F9051DA4F967007C1E03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94B0F9071DA4F967007C1E03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				94B0F9051DA4F967007C1E03 /* AppDelegate.swift */,
+				94616F1F1DD5C8E600A5DB9E /* TableViewController.swift */,
 				94B0F9071DA4F967007C1E03 /* ViewController.swift */,
+				94616F231DD5F2BB00A5DB9E /* DetalleLibroController.swift */,
+				94616F211DD5E06100A5DB9E /* Libro.swift */,
 				94B0F9091DA4F967007C1E03 /* Main.storyboard */,
 				94B0F90F1DA4F967007C1E03 /* Assets.xcassets */,
 				94B0F9111DA4F967007C1E03 /* LaunchScreen.storyboard */,
@@ -267,7 +276,10 @@
 			files = (
 				94B0F9081DA4F967007C1E03 /* ViewController.swift in Sources */,
 				94B0F90E1DA4F967007C1E03 /* Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_org.xcdatamodeld in Sources */,
+				94616F241DD5F2BB00A5DB9E /* DetalleLibroController.swift in Sources */,
 				94B0F9061DA4F967007C1E03 /* AppDelegate.swift in Sources */,
+				94616F221DD5E06100A5DB9E /* Libro.swift in Sources */,
+				94616F201DD5C8E600A5DB9E /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

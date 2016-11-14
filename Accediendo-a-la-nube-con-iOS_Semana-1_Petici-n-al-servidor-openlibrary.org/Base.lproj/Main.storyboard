@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5LC-bp-Mtf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jUZ-eD-cdy">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Petición al servidor openlibrary.org-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_org" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,25 +18,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ib-6V-RMc">
-                                <frame key="frameInset" minY="64" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7ib-6V-RMc">
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Scy-b7-LeR"/>
                                 </connections>
                             </searchBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhj-V7-TCj">
-                                <frame key="frameInset" minY="108" width="375" height="559"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhj-V7-TCj">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QS5-ML-dxm">
+                                <items>
+                                    <navigationItem title="Nuevo libro" id="UB2-Mn-us1">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="iot-gX-Qpb">
+                                            <connections>
+                                                <action selector="cancelar:" destination="BYZ-38-t0r" id="RCu-QR-yvH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Agregar" id="K3I-U2-cYS">
+                                            <connections>
+                                                <action selector="agregar:" destination="BYZ-38-t0r" id="YGc-Qz-72Z"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QS5-ML-dxm" firstAttribute="trailing" secondItem="7ib-6V-RMc" secondAttribute="trailing" id="1Up-VJ-ZKp"/>
+                            <constraint firstItem="yhj-V7-TCj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="54" id="9d2-SJ-Nb8"/>
+                            <constraint firstItem="yhj-V7-TCj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9sQ-yz-ren"/>
+                            <constraint firstItem="yhj-V7-TCj" firstAttribute="top" secondItem="7ib-6V-RMc" secondAttribute="bottom" id="Dda-lt-GKb"/>
+                            <constraint firstItem="7ib-6V-RMc" firstAttribute="top" secondItem="QS5-ML-dxm" secondAttribute="bottom" id="bkS-Eg-Ybo"/>
+                            <constraint firstItem="7ib-6V-RMc" firstAttribute="leading" secondItem="yhj-V7-TCj" secondAttribute="leading" id="gFu-kl-RhS"/>
+                            <constraint firstItem="QS5-ML-dxm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hEv-Ud-4A7"/>
+                            <constraint firstItem="7ib-6V-RMc" firstAttribute="trailing" secondItem="yhj-V7-TCj" secondAttribute="trailing" id="nAd-vX-7pz"/>
+                            <constraint firstItem="QS5-ML-dxm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ylw-6M-vcI"/>
+                            <constraint firstItem="QS5-ML-dxm" firstAttribute="leading" secondItem="7ib-6V-RMc" secondAttribute="leading" id="zxk-ag-IOq"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Petición al servidor openlibrary.org" id="zLC-3E-PVa"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="7ib-6V-RMc" id="GAj-Sw-YKZ"/>
                         <outlet property="textView" destination="yhj-V7-TCj" id="Djl-r8-HLa"/>
@@ -44,25 +73,99 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="777"/>
+            <point key="canvasLocation" x="1729" y="1091"/>
+        </scene>
+        <!--openlibrary.org-->
+        <scene sceneID="bTg-tA-sma">
+            <objects>
+                <tableViewController id="5tj-wX-c8v" customClass="TableViewController" customModule="Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_org" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GGw-LA-09m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Celda" id="Gde-1G-pqC">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gde-1G-pqC" id="e45-Xl-FDF">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="3dI-rc-dta" kind="show" identifier="detalle" id="XaC-4d-nJI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5tj-wX-c8v" id="mfl-2L-N4C"/>
+                            <outlet property="delegate" destination="5tj-wX-c8v" id="7qr-NB-0n8"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="openlibrary.org" id="WBi-QK-vj4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Q6A-aH-9Ak">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="popoverPresentation" identifier="agregar" popoverAnchorBarButtonItem="Q6A-aH-9Ak" id="bG3-AO-tbh">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mCN-uc-Nde" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="1442"/>
+        </scene>
+        <!--Detalle Libro Controller-->
+        <scene sceneID="CsQ-MS-8J6">
+            <objects>
+                <viewController id="3dI-rc-dta" customClass="DetalleLibroController" customModule="Accediendo_a_la_nube_con_iOS_Semana_1_Petici_n_al_servidor_openlibrary_org" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gwG-Ve-svc"/>
+                        <viewControllerLayoutGuide type="bottom" id="kxu-tn-AfR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7o7-4G-YNZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PP2-RU-kNo">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PP2-RU-kNo" firstAttribute="leading" secondItem="7o7-4G-YNZ" secondAttribute="leading" id="1vB-By-sIU"/>
+                            <constraint firstItem="PP2-RU-kNo" firstAttribute="centerX" secondItem="7o7-4G-YNZ" secondAttribute="centerX" id="IE8-7L-vbS"/>
+                            <constraint firstItem="PP2-RU-kNo" firstAttribute="centerY" secondItem="7o7-4G-YNZ" secondAttribute="centerY" constant="32" id="gBx-VZ-Djh"/>
+                            <constraint firstItem="PP2-RU-kNo" firstAttribute="top" secondItem="gwG-Ve-svc" secondAttribute="bottom" id="sLX-NC-QEV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="PP2-RU-kNo" id="Nqk-lO-SKi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Mg-cX-WI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728.8" y="1771.6641679160421"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="ccK-mt-lRm">
+        <scene sceneID="9oI-mM-INK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5LC-bp-Mtf" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g9P-cu-2fX">
+                <navigationController id="jUZ-eD-cdy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ic9-KO-pXo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="AAj-bX-ika"/>
+                        <segue destination="5tj-wX-c8v" kind="relationship" relationship="rootViewController" id="5qE-cV-8me"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Hv-zG-n1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7lz-lZ-OzN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29.600000000000001" y="776.76161919040487"/>
+            <point key="canvasLocation" x="30" y="1442"/>
         </scene>
     </scenes>
 </document>

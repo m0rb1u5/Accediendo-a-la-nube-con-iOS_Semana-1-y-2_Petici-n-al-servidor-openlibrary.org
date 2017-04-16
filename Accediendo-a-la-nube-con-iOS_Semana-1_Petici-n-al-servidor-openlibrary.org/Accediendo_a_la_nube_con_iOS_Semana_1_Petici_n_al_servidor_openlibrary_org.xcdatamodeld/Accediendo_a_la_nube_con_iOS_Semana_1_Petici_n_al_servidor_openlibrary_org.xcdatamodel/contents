@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11524" systemVersion="15G31" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AutorEntidad" representedClassName="AutorEntidad" syncable="YES" codeGenerationType="class">
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pertenece" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LibroEntidad" inverseName="tiene" inverseEntity="LibroEntidad" syncable="YES"/>
+    </entity>
+    <entity name="LibroEntidad" representedClassName="LibroEntidad" syncable="YES" codeGenerationType="class">
+        <attribute name="cover" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="isbn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tiene" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AutorEntidad" inverseName="pertenece" inverseEntity="AutorEntidad" syncable="YES"/>
+    </entity>
+    <fetchRequest name="peticionLibro" entity="LibroEntidad" predicateString="isbn == $isbn"/>
+    <fetchRequest name="peticionLibros" entity="LibroEntidad"/>
+    <elements>
+        <element name="AutorEntidad" positionX="-54" positionY="18" width="128" height="75"/>
+        <element name="LibroEntidad" positionX="-263" positionY="-27" width="128" height="103"/>
+    </elements>
 </model>

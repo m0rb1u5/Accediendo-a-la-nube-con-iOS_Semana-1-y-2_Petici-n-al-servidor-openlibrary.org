@@ -10,16 +10,19 @@ import Foundation
 import UIKit
 
 class Libro {
+    var isbn: String?
     var titulo: String?
     var autores: Array<String> = Array<String>()
     var cover: UIImage?
     
     init() {
+        self.isbn = nil
         self.titulo = nil
         self.autores = Array<String>()
         self.cover = nil
     }
-    init(titulo: String?, autores: Array<String>, cover: UIImage?) {
+    init(isbn: String?, titulo: String?, autores: Array<String>, cover: UIImage?) {
+        self.isbn = isbn
         self.titulo = titulo
         self.autores = autores
         self.cover = cover
@@ -66,7 +69,7 @@ class Libro {
         return attributedText
     }
     func isEmpty() -> Bool {
-        if (self.titulo == nil && self.autores.isEmpty && self.cover == nil) {
+        if (self.isbn == nil && self.titulo == nil && self.autores.isEmpty && self.cover == nil) {
             return true
         }
         else {

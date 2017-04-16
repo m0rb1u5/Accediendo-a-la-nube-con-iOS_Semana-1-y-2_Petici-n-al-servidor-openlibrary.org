@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 protocol MyDelegado {
     func agregarLibro(libro: Libro)
@@ -19,10 +20,13 @@ class ViewController: UIViewController, UISearchBarDelegate {
     var indicator: UIActivityIndicatorView!
     var libro: Libro = Libro()
     var delegado: MyDelegado?
+    var contexto: NSManagedObjectContext? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.contexto = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
         searchBar.showsCancelButton = true
         let cancelButton = searchBar.value(forKey: "cancelButton") as! UIButton
         cancelButton.setTitle("Limpiar", for: .normal)
@@ -52,6 +56,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
                     let dico1 = json as! NSDictionary
                     if (dico1["ISBN:"+searchBar.text!] != nil) {
                         self.libro = Libro()
+                        self.libro.isbn = searchBar.text!
                         DispatchQueue.main.async {
                             let bodyFontDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: UIFontTextStyle.body)
                             let bodyFont = UIFont(descriptor: bodyFontDescriptor, size: 0)
@@ -153,7 +158,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
                 }
             }
             else {
-                let e = error as! NSError
+                let e = error! as NSError
                 print(e)
                 DispatchQueue.main.async {
                     let title = NSLocalizedString("Error \(e.code)", comment: "")
@@ -184,8 +189,39 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBAction func agregar(_ sender: UIBarButtonItem) {
         if let delegado = self.delegado {
             if !self.libro.isEmpty() {
-                delegado.agregarLibro(libro: self.libro)
-                self.dismiss(animated: true, completion: nil)
+                self.libro.isbn = self.libro.isbn?.replacingOccurrences(of: "-", with: "")
+                
+                let libroEntidad = NSEntityDescription.entity(forEntityName: "LibroEntidad", in: self.contexto!)
+                let peticion = libroEntidad?.managedObjectModel.fetchRequestFromTemplate(withName: "peticionLibro", substitutionVariables: ["isbn": self.libro.isbn!])
+                do {
+                    let libroEntidad2: [Any]? = try self.contexto?.fetch(peticion!)
+                    if ((libroEntidad2?.count)! > 0) {
+                        let title = NSLocalizedString("Advertencia", comment: "")
+                        let message = NSLocalizedString("Este libro ya se encuentra en la lista.", comment: "")
+                        let cancelButtonTitle = NSLocalizedString("OK", comment: "")
+                        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                        let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .cancel) { action in
+                            NSLog("La alerta acaba de ocurrir.")
+                        }
+                        alertController.addAction(cancelAction)
+                        self.present(alertController, animated: true, completion: nil)
+                    }
+                    else {
+                        delegado.agregarLibro(libro: self.libro)
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                }
+                catch let error as NSError {
+                    let title = NSLocalizedString("Error \(error.code)", comment: "")
+                    let message = NSLocalizedString(error.localizedDescription, comment: "")
+                    let cancelButtonTitle = NSLocalizedString("OK", comment: "")
+                    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                    let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .cancel) { action in
+                        NSLog("La alerta acaba de ocurrir.")
+                    }
+                    alertController.addAction(cancelAction)
+                    self.present(alertController, animated: true, completion: nil)
+                }
             }
             else {
                 let title = NSLocalizedString("Advertencia", comment: "")

@@ -117,7 +117,7 @@ Puedes seleccionar, al momento de crear tu proyecto la plantilla Maestro-Detalle
 
 **IMPORTANTE**. Al momento de crear tu proyecto, no olvides seleccionar el uso de Core Data ya que se usará en ese módulo y así se facilitan las cosas
 
-<img src="./core_data.png" width="500">
+<img src="./images/core_data.png" width="500">
 
 ## Criterios de revisión
 1. Al iniciar la aplicación, una vista tabla deberá ser mostrada
@@ -153,7 +153,7 @@ Puedes seleccionar, al momento de crear tu proyecto la plantilla Maestro-Detalle
 
 **IMPORTANTE**. Al momento de crear tu proyecto, no olvides seleccionar el uso de Core Data ya que se usará en ese módulo y así se facilitan las cosas
 
-<img src="./core_data.png" width="500">
+<img src="./images/core_data.png" width="500">
 
 **ADICIONALMENTE**, utilizarás los conceptos de Core Data para hacer persistir los datos de la búsqueda de libros
 
@@ -170,13 +170,25 @@ Puedes seleccionar, al momento de crear tu proyecto la plantilla Maestro-Detalle
 7. Al relanzar la aplicación la vista tabla deberá mostrar los títulos de los libros que fueron el resultado de búsquedas anteriores
 
 ## Resultado
+Se realiza el esquema de la base de datos con estas entidades y relaciones:
+
+<img src="./images/esquema.png" width="500">
+
 Se muestra la pantalla del iPad Air al ejecutar el programa (hacer click en la imagen para ver la ejecución):
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/MWFiRnYVEJY/0.jpg)](https://www.youtube.com/watch?v=MWFiRnYVEJY "Vistas jerárquicas de peticiones al servidor openlibrary.org: iPad Air (1 de 2)")
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/uG9LJzT25EU/0.jpg)](https://www.youtube.com/watch?v=uG9LJzT25EU "Añadiendo persistencia a la búsqueda de libros: iPad Air (1 de 2)")
 
 Se muestra la pantalla del iPhone 6 al ejecutar el programa (hacer click en la imagen para ver la ejecución):
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/SbqqZDN6MHw/0.jpg)](https://www.youtube.com/watch?v=SbqqZDN6MHw "Vistas jerárquicas de peticiones al servidor openlibrary.org: iPhone 7 (2 de 2)")
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/uB-vCntvuCI/0.jpg)](https://www.youtube.com/watch?v=uB-vCntvuCI "Añadiendo persistencia a la búsqueda de libros: iPhone 7 (2 de 2)")
+
+Luego de la ejecución del programa la entidad **LibroEntidad** queda así:
+
+<img src="./images/libro_entidad.png" width="500">
+
+Y la entidad **AutorEntidad** queda así:
+
+<img src="./images/autor_entidad.png" width="500">
 
 ***
 Juan Carlos Carbajal Ipenza

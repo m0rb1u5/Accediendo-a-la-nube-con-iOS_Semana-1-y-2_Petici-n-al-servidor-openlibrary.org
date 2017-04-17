@@ -172,7 +172,7 @@ Puedes seleccionar, al momento de crear tu proyecto la plantilla Maestro-Detalle
 ## Resultado
 Se realiza el esquema de la base de datos con estas entidades y relaciones:
 
-<img src="./images/esquema.png" width="500">
+<img src="./images/esquema.png" width="1000">
 
 Se muestra la pantalla del iPad Air al ejecutar el programa (hacer click en la imagen para ver la ejecución):
 
@@ -184,11 +184,11 @@ Se muestra la pantalla del iPhone 6 al ejecutar el programa (hacer click en la i
 
 Luego de la ejecución del programa la entidad **LibroEntidad** queda así:
 
-<img src="./images/libro_entidad.png" width="500">
+<img src="./images/libro_entidad.png" width="1000">
 
 Y la entidad **AutorEntidad** queda así:
 
-<img src="./images/autor_entidad.png" width="500">
+<img src="./images/autor_entidad.png" width="1000">
 
 ***
 Juan Carlos Carbajal Ipenza

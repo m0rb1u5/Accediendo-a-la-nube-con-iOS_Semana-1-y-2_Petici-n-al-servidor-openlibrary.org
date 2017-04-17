@@ -139,4 +139,44 @@ Se muestra la pantalla del iPhone 7 al ejecutar el programa (hacer click en la i
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/SbqqZDN6MHw/0.jpg)](https://www.youtube.com/watch?v=SbqqZDN6MHw "Vistas jerárquicas de peticiones al servidor openlibrary.org: iPhone 7 (2 de 2)")
 
 ***
+
+# Añadiendo persistencia a la búsqueda de libros
+Tarea "Añadiendo persistencia a la búsqueda de libros" del curso "Accediendo a la nube con iOS" que se lleva en el portal Coursera.
+## Instrucciones
+Además de lo establecido en el entregable anterior, deberá incluir persistencia de datos, es decir (se repite la descripción del entregable anterior por conveniencia).
+
+En este entregable desarrollarás una aplicación usando Xcode que realice una petición a [Open Library](https://openlibrary.org/) y que muestre el resultado en una tabla jerárquica a dos niveles. En el primer nivel se encontrará una vista tabla, mostrando los títulos de libros ya buscados. Al momento de seleccionar uno de los renglones de la tabla, el detalle del libro deberá ser mostrado.
+
+La idea es que los libros que se vayan buscando se vayan integrando la estructura que representará la fuente de datos de la vista tabla.
+
+Puedes seleccionar, al momento de crear tu proyecto la plantilla Maestro-Detalle. De esta manera se facilita la codificación de tu aplicación
+
+**IMPORTANTE**. Al momento de crear tu proyecto, no olvides seleccionar el uso de Core Data ya que se usará en ese módulo y así se facilitan las cosas
+
+<img src="./core_data.png" width="500">
+
+**ADICIONALMENTE**, utilizarás los conceptos de Core Data para hacer persistir los datos de la búsqueda de libros
+
+## Criterios de revisión
+1. Al iniciar la aplicación, una vista tabla deberá ser mostrada
+2. Deberá contener un **UIBarButtonItem**, en específico el Add (signo +) en la barra de navegación que permita hacer una búsqueda y añadir el libro a la tabla
+3. Al presionar el botón de añadir (punto anterior), se deberá mostrar una vista que permita ingresar el ISBN de un libro y mostrar, en caso de éxito de la búsqueda:
+  - El título del libro
+  - Los autores del libro
+  - La portada (en caso de que se encuentre)
+4. Al regresar a la vista tabla, el título del libro buscado deberá aparecer en la tabla
+5. Si seleccionamos un renglón de la tabla que contenga un título de libro, deberá mostrar sus detalles
+6. Deberá haber un esquema de datos que muestre las entidades y sus relaciones que serán necesarias para almacenar los datos resultado de una búsqueda de un libro por su ISBN
+7. Al relanzar la aplicación la vista tabla deberá mostrar los títulos de los libros que fueron el resultado de búsquedas anteriores
+
+## Resultado
+Se muestra la pantalla del iPad Air al ejecutar el programa (hacer click en la imagen para ver la ejecución):
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/MWFiRnYVEJY/0.jpg)](https://www.youtube.com/watch?v=MWFiRnYVEJY "Vistas jerárquicas de peticiones al servidor openlibrary.org: iPad Air (1 de 2)")
+
+Se muestra la pantalla del iPhone 6 al ejecutar el programa (hacer click en la imagen para ver la ejecución):
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/SbqqZDN6MHw/0.jpg)](https://www.youtube.com/watch?v=SbqqZDN6MHw "Vistas jerárquicas de peticiones al servidor openlibrary.org: iPhone 7 (2 de 2)")
+
+***
 Juan Carlos Carbajal Ipenza
